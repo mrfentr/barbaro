@@ -1,0 +1,13 @@
+run = "npm run start"
+build = "npm run build"
+entrypoint = "app/page.tsx"
+
+[env]
+PORT = "3000"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+build = ["sh", "-c", "npm run build"]
+run = ["sh", "-c", "npm run start"]
